@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Rayda Docs</title>
+    <meta name="description" content="Internal Rayda product & engineering docs" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Theme: docsify-themeable (Simple Dark/Light depending on OS or fixed) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    
+    <style>
+      :root {
+        /* Brand colors */
+        --theme-color: #0ea5e9;
+        --theme-hue: 199;
+        --theme-saturation: 89%;
+        --theme-lightness: 48%;
+
+        /* Typography */
+        --base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        --heading-font-family: var(--base-font-family);
+        --heading-font-weight: 600;
+        
+        /* Layout */
+        --content-max-width: 900px;
+        --sidebar-width: 18rem;
+        
+        /* Subtle UI improvements */
+        --sidebar-nav-link-font-weight--active: 600;
+        --sidebar-name-font-weight: 700;
+        --sidebar-name-margin: 1.5rem 0 1rem 0;
+        --search-input-padding: 0.8em;
+      }
+      
+      /* Make the logo look good */
+      .app-name-link img {
+        height: 32px;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+
+      /* Better table styling */
+      .markdown-section table {
+        display: table;
+        width: 100%;
+      }
+      
+      /* Beautiful blockquotes */
+      .markdown-section blockquote {
+        border-left: 4px solid var(--theme-color);
+        background: rgba(14, 165, 233, 0.05);
+        padding: 1rem;
+        border-radius: 0 8px 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      window.$docsify = {
+        name: "Rayda Docs",
+        repo: "",
+        // docs/ is the site root (host serves this folder at /)
+        basePath: "/",
+        homepage: "README.md",
+        coverpage: true,
+        onlyCover: false,
+        loadSidebar: true,
+        subMaxLevel: 3,
+        auto2top: true,
+        // We provide a static 404.html fallback for hosts that support it.
+        notFoundPage: false,
+        relativePath: false,
+
+        mermaidConfig: {
+          querySelector: ".mermaid",
+        },
+        
+        // Pagination config
+        pagination: {
+          previousText: 'Previous',
+          nextText: 'Next',
+          crossChapter: true,
+          crossChapterText: true,
+        },
+
+        search: {
+          placeholder: "Search docs...",
+          noData: "No results found.",
+          depth: 4,
+          hideOtherSidebarContent: false,
+        },
+      };
+    </script>
+
+    <!-- Docsify -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    
+    <!-- Plugins -->
+    <!-- Search -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+    <!-- Zoom image -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <!-- Copy to clipboard -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <!-- Pagination -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <!-- Themeable -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    <!-- Mermaid diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2/dist/docsify-mermaid.js"></script>
+    
+    <!-- Syntax highlighting (Prism) -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  </body>
+</html>

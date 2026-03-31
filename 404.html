@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Rayda Docs</title>
+    <meta name="description" content="Internal Rayda product & engineering docs" />
+
+    <script>
+      // Static-host fallback for deep links.
+      // If someone opens /prds/kits-and-storage-in-catalogs.md directly, many hosts
+      // will serve that file raw. When the host instead serves this 404.html, we
+      // redirect into Docsify hash routing so the markdown renders.
+      (function () {
+        var path = window.location.pathname || "/";
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+
+        // If already in hash routing, let Docsify handle it.
+        if (hash && hash.startsWith("#/")) return;
+
+        // Normalize and strip leading slash.
+        if (path.startsWith("/")) path = path.slice(1);
+
+        // Default to README when no path.
+        var target = path ? path : "README.md";
+
+        window.location.replace("/#/" + target + search);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+
