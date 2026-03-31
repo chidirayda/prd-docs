@@ -1,6 +1,6 @@
 # PRDs
 
-Product requirement documents live in this folder.
+Product requirement documents live in this folder. Each PRD is structured for **two audiences**: a **Product PRD** (non-technical, first) and a **Technical specification** (implementation detail).
 
 ## Index
 
